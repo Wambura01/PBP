@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# React Code Challenge Final
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Instructions
 
-## Available Scripts
+For this project, you’ll be building out a React application that displays a list of your recent bank transactions.
 
-In the project directory, you can run:
+Part of what this code challenge is testing is your ability to follow given instructions. While you will definitely have a significant amount of freedom in how you implement the features, be sure to carefully read the directions for setting up the application.
 
-### `npm start`
+When you clone down this project, the component `<BankContainer />` will have an initial default state. Use this data to get the functionality of the app working. Once that is complete, you can replace that initial state with data you fetch from sample_data.json file.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Deliverables
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Please implement the following user stories:**
 
-### `npm test`
+- As a user, you should be able to see a table of transactions.
+- As a user, you should be able select a radio button that toggles the active category.
+- You should only see transactions that match the active category or _all transactions_ if "All" is selected
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![example project](src/assets/react-final-challenge.gif)
 
-### `npm run build`
+Use the above gif as an example of how the app should function.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We’ve provided some starter code you can use to guide you, but feel free to create or remove components as you see fit.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After cloning down the project
 
-### `npm run eject`
+- run `npm install`
+- You can boot up the server with `npm start`. It will run on `localhost:3000`.
+- The app uses [Semantic UI](https://semantic-ui.com/) for styling. If you see any unfamiliar classNames on some components, don't sweat! That's coming from Semantic UI and you shouldn't need to touch it.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Suggested Workflow
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can approach this any way you would like but below is a reasonable approach to this challenge. If you are not sure where or how to begin, follow the steps here.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Get the list of Transactions to display on the page given the default state data
+2. After that is working, replace that data with the JSON inside the `sample.json file`. It will be in the same format as the default data.
+3. Now that you are using the real data, ensure that the user selecting a radio button changes the state of the `activeCategory`.
+4. Figure out how to render only the transactions in which the category matches the active category, or if the active category is `'All'`, render everything.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Criteria
 
-## Learn More
+We’ll be evaluating your code based on the following criteria:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **React Components:** Does the app reasonably separate responsibilities into components and a have a component hierarchy?
+- **Props:** Does the app have at least one presentational component that receives props? Does the app pass props down from a higher-level component to a lower one? Does the app make use of passing a functional prop?
+- **State:** Does clicking radio buttons change the state of the active category and calls this.setState?
+- **Lifecycle Methods & API:** Does the app make an AJAX request to the API and return data? Does it set the state of the component within the app with that data within a lifecycle method?
+- **Feature:** Does the app filter the list of transactions?
+- Does the app follow best practices regarding state and component composition?
+- You are allowed to refactor existing code to use latest react methods
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Good luck!

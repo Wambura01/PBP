@@ -1,0 +1,32 @@
+Hello,
+
+I hope you are well!!
+
+This a brief description of what I did in the assessment project!!
+
+
+*** PROJECT DESCRIPTION ***
+- The user will load the app, data will be fetched and displayed in a table. 
+- The user is able to filter the data based on the checkboxes they click. 
+- They will only see the data that corresponds to their checkbox selection and what they type in the search box.
+- Data is fetched in the BankContainer component and passed to the Table component as a prop and displayed to the user.
+- This project was built from scratch with no 3rd party table libraries.
+- Functional components used instead of Class components.
+- Hook (useEffect) was used in place of lifecycle method.
+- Fetch operation achieved using react inbuilt fetch API.
+
+*** TECHNOLOGIES USED ***
+1. React.Js - Used to build the whole UI
+2. Syntactically Awesome Style Sheet (Sass) - Used to style the UI
+3. Json-Server - Used to facilitate data fetching. It was used to create demo REST JSON services within a short span of minutes.
+
+*** PROJECT DELIVERABLES ***
+- All project deliverables as described in the project's README.md were delivered.
+
+*** SETUP ***
+- Clone the project
+- Run yarn/npm install in your terminal to download dependencies
+- Open a new terminal instance and navigate to the project folder. 
+- Type "json-server --watch sample_data.json --port 3001" (Or any other port you would want the json server to run on) to get the server running.
+- Run yarn/npm start to start the project in your localhost
+- Happy testing!!!
