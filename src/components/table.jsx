@@ -3,6 +3,7 @@ import React from "react";
 import "./table.scss";
 
 function Table({ data }) {
+  //it checks if data is present and the pulls the keys of the first row
   const columns = data?.length > 0 && Object.keys(data[0]);
 
   return (

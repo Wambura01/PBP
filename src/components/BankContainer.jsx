@@ -6,10 +6,7 @@ import "./bankcontainer.scss";
 function BankContainer() {
   const [transactions, setTransactions] = useState();
   const [filter, setFilter] = useState("");
-  const [searchColumns, setSearchColumns] = useState([
-    "description",
-    "category",
-  ]);
+  const [searchColumns, setSearchColumns] = useState(["category"]);
 
   //fetch data
   useEffect(() => {
@@ -23,7 +20,7 @@ function BankContainer() {
     setFilter(e.target.value);
   };
 
-  //search functionality
+  //search functionality - return all the rows that match our query
   const search = (rows) => {
     return rows?.filter((row) =>
       searchColumns.some(
@@ -34,6 +31,7 @@ function BankContainer() {
     );
   };
 
+  //needed for the checkboxes
   const columns = transactions?.length > 0 && Object.keys(transactions[0]);
 
   return (
@@ -55,11 +53,12 @@ function BankContainer() {
                 type="checkbox"
                 checked={searchColumns.includes(column)}
                 onChange={(e) => {
-                  const checked = searchColumns.includes(column);
-                  setSearchColumns((prev) =>
-                    checked
-                      ? prev.filter((sc) => sc !== column)
-                      : [...prev, column]
+                  const checked = searchColumns.includes(column); //checking if the checkbox was checked
+                  setSearchColumns(
+                    (prev) =>
+                      checked
+                        ? prev.filter((sc) => sc !== column) //remove the unchecked from our search columns
+                        : [...prev, column] //add the checked to list of search columns
                   );
                 }}
               />
